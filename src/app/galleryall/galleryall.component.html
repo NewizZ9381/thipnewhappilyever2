@@ -1,0 +1,157 @@
+      <!-- Image Grid or Thumbnails -->
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-10">
+                <div class="container-fluid" id="my-grid">
+                    <div class="row">
+                        <div class="my-grid-img">
+                            <!-- {% for imgth, imgDiv in imgs %} -->
+                                <!-- <div class="raw">
+                                    <img [lazyLoad]="image1"class="img-thumbnail filterDiv" data-wow-delay="0.1s"  onclick="openModal();currentSlide(1)" alt="">
+                                </div> -->
+                            <!-- {% endfor %} -->
+                            <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TW0160.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(1)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image2" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(2)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image3" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(3)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image4" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(4)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image5" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(5)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image6" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(6)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image7" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(7)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image8" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(8)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image9" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(9)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image10" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(10)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image11" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(11)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image12" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(12)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image13" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(13)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image14" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(14)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image15" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(15)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image16" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(16)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image17" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(17)" alt=""></div>
+<div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="image18" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(18)" alt=""></div>
+                        </div>
+                <!-- First Column -->
+                <!-- <div class="col-sm-4">
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-front.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.9s" onclick="openModal();currentSlide(1)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-20x30.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.3s"  onclick="openModal();currentSlide(2)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-1.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.1s"  onclick="openModal();currentSlide(3)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-back.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.9s"  onclick="openModal();currentSlide(4)"></div>
+                </div> -->
+                <!-- Second Column -->
+                <!-- <div class="col-sm-4">
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-10.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.5s"  onclick="openModal();currentSlide(5)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-2.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.7s"  onclick="openModal();currentSlide(6)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-3.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.1s"  onclick="openModal();currentSlide(7)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-front.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.5s"  onclick="openModal();currentSlide(8)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-4.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.7s"  onclick="openModal();currentSlide(9)"></div>
+                </div> -->
+                <!-- Third Column -->
+                <!-- <div class="col-sm-4">
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-5.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.1s"  onclick="openModal();currentSlide(10)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-back.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.3s"  onclick="openModal();currentSlide(11)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-6.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.7s"  onclick="openModal();currentSlide(12)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-7.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.9s"  onclick="openModal();currentSlide(13)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-8.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.3s"  onclick="openModal();currentSlide(14)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-9.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.5s"  onclick="openModal();currentSlide(15)"></div>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+      <!-- Modal for Full Screen Image View Begins -->
+  <div id="my-modal" class="modal">
+        
+    <!-- Close Button -->
+    <span class="close" onclick="closeModal()">&times;</span>
+    
+    <!-- Content for Modal -->
+    <div class="modal-content" id="my-modal-content">
+        <!-- Images for Modal (Image Viewer or Slide Show) -->
+
+        <!-- <div class="my-slides" *ngFor="let image of gallery.images; let i = index">
+            <div class="numbertext">{{ i+1 }} / 41</div>
+            <img src="../assets/img/{{ image }}" loading="lazy" class="landscape-image">
+        </div> -->
+        <div class="my-slides">
+         <div class="numbertext">1 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg1" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">2 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg2" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">3 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg3" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">4 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg4" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">5 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg5" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">6 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg6" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">7 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg7" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">8 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg8" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">9 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg9" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">10 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg10" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">11 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg11" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">12 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg12" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">13 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg13" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">14 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg14" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">15 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg15" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">16 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg16" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">17 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg17" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">18 / 18</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="lazyimg18" loading="lazy" class="landscape-image">
+      </div>
+
+        
+        <!-- Next and Previous Buttons -->
+        <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlides(1)">&#10095;</a>
+    </div>
+ </div>
+<!-- Modal for Full Screen Image View Ends -->

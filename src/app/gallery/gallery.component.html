@@ -1,0 +1,33 @@
+    <!-- Photos Section Begins -->
+    <section class="section-padding" id="photos">
+      <div class="container-fluid">
+          <!-- Title Text -->
+          <div class="row">
+              <div class="col-sm-12">
+                  <h2 class="contact-sec text-center wow fadeInLeft" data-wow-delay="0.1s">
+                  Let's <span class="decorate">See</span> our Photos</h2>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12">
+                  <div id="myBtnContainer">
+                      <a [routerLink]="['/']"><button class="btn btn-outline-danger" (click)="getActiveTab('highlight')" [class.active]="activetab === 'highlight'"> Highlight</button></a>
+                      <a [routerLink]="['/GalleryChurch']"><button class="btn btn-outline-danger" (click)="getActiveTab('church')" [class.active]="activetab === 'church'"> Church</button></a>
+                      <a [routerLink]="['/GalleryWedrec']"><button class="btn btn-outline-danger" (click)="getActiveTab('hotel')" [class.active]="activetab === 'hotel'"> Hotel</button></a>
+                      <a [routerLink]="['/GalleryPrewed']"><button class="btn btn-outline-danger" (click)="getActiveTab('prewed')" [class.active]="activetab === 'prewed'"> Prewedding</button></a>
+                      <!-- <a [routerLink]="['/GalleryOther']"><button class="btn btn-outline-danger"> Other</button></a> -->
+                      <!-- <button class="btn btn-outline-danger" onclick="filterSelection('all')"> Show all</button>
+                      <button class="btn btn-outline-danger" onclick="filterSelection('church')"> Church</button>
+                      <button class="btn btn-outline-danger" onclick="filterSelection('wedrec')"> Wedding Reception</button>
+                      <button class="btn btn-outline-danger" onclick="filterSelection('prewed')"> Pre Wedding</button>
+                      <button class="btn btn-outline-danger" onclick="filterSelection('other')"> Other</button> -->
+                  </div>
+              </div>
+          </div>
+      </div>   
+
+      <router-outlet></router-outlet>
+
+    </section>
+
+  <!-- Photos Section Ends -->

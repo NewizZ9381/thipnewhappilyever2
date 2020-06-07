@@ -1,0 +1,96 @@
+################### ANGULAR ###########################
+
+ng new my-app
+
+npm install @angular/core@9.1.4 @angular/animations@9.1.4 @angular/common@9.1.4 @angular/forms@9.1.4 @angular/platform-browser@9.1.4 @angular/router@9.1.4 @angular/platform-browser-dynamic@9.1.4 @angular/compiler@9.1.4 @angular/compiler-cli@9.1.4 @angular/language-service@9.1.4
+
+ng build
+
+ng serve (ng serve --open)
+
+Component
+ng generate component YOURCOMPONENTNAME
+config component.html & app.component.html
+
+Routing
+ng generate module app-routing --flat --module=a
+config app-routing.module.ts & app.component.html
+
+Separate static file
+build json in header.component.ts 
+config header.component.html
+
+Configuration file
+move to central config file
+create app/configuration.ts
+ng generate service config (ng g s config)
+
+app.module.ts
+import { ConfigService} from './config.service'
+providers: [ConfigService], 
+
+config.service.ts
+import { Injectable } from '@angular/core';
+import { configuration } from './configuration';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ConfigService {
+
+  config = configuration
+
+  constructor() { }
+
+  getConfig(){
+    return this.config
+  }
+
+}
+
+header.component.ts
+import { ConfigService } from '../config.service';
+constructor(private config: ConfigService) { }
+getHeader(){
+  return this.config.getConfig().header;
+}
+    header:any={ };  ngOnInit(){
+    this.header = this.getHeader();
+  }
+
+
+ng serve --host 0.0.0.0  --disable-host-check (ngrok)
+
+################### GOOGLE CLOUD ###########################
+ng build --prod
+
+mkdir angular-gcp-app
+gsutil rsync -r gs://angular-thipnewhappilyever-bucket ./angular-gcp-app
+cd angular-gcp-app
+gcloud app deploy 
+
+rm -r angular-gcp-thipnewhappilyever
+rm -r angular-gcp-app
+
+File upload done.
+Updating service [default]...done.
+Setting traffic split for service [default]...done.
+Deployed service [default] to [https://thipnewhappilyever.df.r.appspot.com]
+
+You can stream logs from the command line by running:
+  $ gcloud app logs tail -s default
+
+To view your application in the web browser run:
+  $ gcloud app browse
+
+npm install --save bootstrap
+npm install jquery -- save
+npm i jquery@1.9.1 --save
+
+npm install @ng-bootstrap/ng-bootstrap
+npm install @angular/localize --save
+import '@angular/localize/init' (in polyfills.ts)
+
+npm install ng-lazyload-image --save (use this)
+npm install ngx-lazy-load-images --save
+npm i ngx-lazy-load-images2

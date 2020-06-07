@@ -1,0 +1,846 @@
+      <!-- Image Grid or Thumbnails -->
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-10">
+                <div class="container-fluid" id="my-grid">
+                    <div class="row">
+                        <div class="my-grid-img">
+                            <!-- {% for imgth, imgDiv in imgs %} -->
+                                <!-- <div class="raw" *ngFor='let image of gallery.images; let i = index'>
+                                    <img src="../assets/imgthumbnail/{{image}}" class="img-thumbnail filterDiv" data-wow-delay="0.1s"  onclick="openModal();currentSlide(1)" alt="">
+                                </div> -->
+                            <!-- {% endfor %} -->
+                            <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-20x30.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(1)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-back.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(2)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-front.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(3)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-1.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(4)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-10.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(5)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-2.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(6)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-3.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(7)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-4.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(8)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-5.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(9)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-6.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(10)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-7.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(11)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-8.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(12)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/TWprewed-P-9.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(13)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (1).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(14)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (10).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(15)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (102).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(16)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (105).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(17)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (107).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(18)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (109).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(19)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (111).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(20)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (112).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(21)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (114).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(22)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (117).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(23)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (119).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(24)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (121).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(25)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (122).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(26)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (124).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(27)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (125).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(28)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (127).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(29)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (129).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(30)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (13).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(31)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (131).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(32)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (138).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(33)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (139).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(34)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (14).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(35)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (142).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(36)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (143).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(37)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (147).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(38)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (154).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(39)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (155).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(40)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (157).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(41)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (158).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(42)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (16).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(43)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (160).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(44)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (163).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(45)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (164).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(46)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (167).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(47)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (17).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(48)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (170).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(49)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (173).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(50)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (176).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(51)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (177).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(52)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (179).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(53)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (18).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(54)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (183).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(55)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (185).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(56)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (189).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(57)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (19).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(58)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (191).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(59)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (196).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(60)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (20).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(61)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (200).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(62)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (202).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(63)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (204).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(64)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (206).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(65)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (208).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(66)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (210).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(67)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (212).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(68)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (213).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(69)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (217).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(70)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (219).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(71)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (22).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(72)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (223).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(73)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (224).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(74)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (226).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(75)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (228).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(76)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (231).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(77)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (233).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(78)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (235).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(79)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (236).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(80)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (238).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(81)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (24).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(82)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (242).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(83)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (243).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(84)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (247).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(85)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (249).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(86)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (250).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(87)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (253).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(88)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (255).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(89)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (257).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(90)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (26).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(91)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (260).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(92)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (261).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(93)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (263).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(94)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (264).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(95)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (267).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(96)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (271).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(97)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (274).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(98)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (275).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(99)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (276).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(100)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (277).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(101)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (278).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(102)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (279).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(103)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (28).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(104)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (280).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(105)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (281).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(106)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (282).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(107)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (283).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(108)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (284).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(109)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (285).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(110)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (286).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(111)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (287).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(112)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (30).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(113)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (32).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(114)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (34).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(115)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (36).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(116)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (37).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(117)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (4).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(118)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (41).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(119)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (43).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(120)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (46).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(121)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (49).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(122)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (5).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(123)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (50).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(124)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (53).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(125)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (54).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(126)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (56).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(127)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (57).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(128)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (6).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(129)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (61).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(130)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (62).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(131)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (63).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(132)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (66).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(133)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (68).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(134)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (71).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(135)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (73).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(136)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (75).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(137)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (77).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(138)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (78).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(139)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (8).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(140)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (80).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(141)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (81).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(142)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (84).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(143)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (86).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(144)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (87).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(145)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (9).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(146)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (90).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(147)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (92).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(148)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (93).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(149)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr (98).jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(150)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr-front.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(151)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvr20x30.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(152)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvrP-10.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(153)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvrP-4.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(154)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvrP-5.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(155)" alt=""></div>
+                           <div class="raw"><img [defaultImage]="defaultImage" [lazyLoad]="'../assets/imgthumbnail/vvrP-9.jpg'" class="img-thumbnail filterDiv" data-wow-delay="0.1s" loading="lazy" onclick="openModal();currentSlide(156)" alt=""></div>
+                        </div>
+                <!-- First Column -->
+                <!-- <div class="col-sm-4">
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-front.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.9s" onclick="openModal();currentSlide(1)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-20x30.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.3s"  onclick="openModal();currentSlide(2)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-1.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.1s"  onclick="openModal();currentSlide(3)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-back.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.9s"  onclick="openModal();currentSlide(4)"></div>
+                </div> -->
+                <!-- Second Column -->
+                <!-- <div class="col-sm-4">
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-10.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.5s"  onclick="openModal();currentSlide(5)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-2.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.7s"  onclick="openModal();currentSlide(6)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-3.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.1s"  onclick="openModal();currentSlide(7)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-front.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.5s"  onclick="openModal();currentSlide(8)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-4.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.7s"  onclick="openModal();currentSlide(9)"></div>
+                </div> -->
+                <!-- Third Column -->
+                <!-- <div class="col-sm-4">
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-5.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.1s"  onclick="openModal();currentSlide(10)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-back.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="0.3s"  onclick="openModal();currentSlide(11)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-6.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.7s"  onclick="openModal();currentSlide(12)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-7.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="1.9s"  onclick="openModal();currentSlide(13)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-8.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.3s"  onclick="openModal();currentSlide(14)"></div>
+                    <div class="raw"><img src="{% static 'slideshow/img/prewed-P-9.jpg' %}" class="fit-image wow fadeInLeft" data-wow-delay="2.5s"  onclick="openModal();currentSlide(15)"></div>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+      <!-- Modal for Full Screen Image View Begins -->
+  <div id="my-modal" class="modal">
+        
+    <!-- Close Button -->
+    <span class="close" onclick="closeModal()">&times;</span>
+    
+    <!-- Content for Modal -->
+    <div class="modal-content" id="my-modal-content">
+        <!-- Images for Modal (Image Viewer or Slide Show) -->
+
+        <!-- <div class="my-slides" *ngFor="let image of gallery.images; let i = index">
+            <div class="numbertext">{{ i+1 }} / 41</div>
+            <img src=""../assets/img/{{ image }}" class="landscape-image">
+        </div> -->
+        <div class="my-slides">
+         <div class="numbertext">1 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-20x30.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">2 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-back.jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">3 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-front.jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">4 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-1.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">5 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-10.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">6 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-2.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">7 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-3.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">8 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-4.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">9 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-5.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">10 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-6.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">11 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-7.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">12 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-8.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">13 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/TWprewed-P-9.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">14 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (1).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">15 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (10).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">16 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (102).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">17 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (105).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">18 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (107).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">19 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (109).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">20 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (111).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">21 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (112).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">22 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (114).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">23 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (117).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">24 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (119).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">25 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (121).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">26 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (122).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">27 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (124).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">28 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (125).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">29 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (127).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">30 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (129).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">31 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (13).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">32 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (131).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">33 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (138).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">34 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (139).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">35 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (14).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">36 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (142).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">37 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (143).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">38 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (147).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">39 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (154).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">40 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (155).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">41 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (157).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">42 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (158).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">43 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (16).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">44 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (160).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">45 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (163).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">46 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (164).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">47 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (167).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">48 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (17).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">49 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (170).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">50 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (173).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">51 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (176).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">52 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (177).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">53 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (179).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">54 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (18).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">55 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (183).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">56 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (185).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">57 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (189).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">58 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (19).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">59 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (191).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">60 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (196).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">61 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (20).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">62 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (200).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">63 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (202).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">64 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (204).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">65 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (206).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">66 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (208).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">67 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (210).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">68 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (212).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">69 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (213).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">70 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (217).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">71 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (219).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">72 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (22).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">73 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (223).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">74 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (224).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">75 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (226).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">76 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (228).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">77 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (231).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">78 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (233).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">79 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (235).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">80 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (236).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">81 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (238).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">82 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (24).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">83 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (242).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">84 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (243).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">85 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (247).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">86 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (249).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">87 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (250).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">88 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (253).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">89 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (255).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">90 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (257).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">91 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (26).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">92 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (260).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">93 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (261).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">94 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (263).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">95 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (264).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">96 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (267).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">97 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (271).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">98 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (274).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">99 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (275).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">100 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (276).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">101 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (277).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">102 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (278).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">103 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (279).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">104 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (28).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">105 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (280).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">106 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (281).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">107 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (282).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">108 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (283).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">109 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (284).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">110 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (285).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">111 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (286).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">112 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (287).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">113 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (30).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">114 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (32).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">115 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (34).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">116 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (36).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">117 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (37).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">118 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (4).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">119 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (41).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">120 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (43).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">121 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (46).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">122 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (49).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">123 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (5).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">124 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (50).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">125 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (53).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">126 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (54).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">127 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (56).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">128 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (57).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">129 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (6).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">130 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (61).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">131 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (62).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">132 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (63).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">133 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (66).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">134 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (68).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">135 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (71).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">136 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (73).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">137 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (75).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">138 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (77).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">139 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (78).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">140 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (8).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">141 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (80).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">142 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (81).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">143 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (84).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">144 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (86).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">145 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (87).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">146 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (9).jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">147 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (90).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">148 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (92).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">149 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (93).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">150 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr (98).jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">151 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr-front.jpg'" loading="lazy" class="portrait-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">152 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvr20x30.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">153 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvrP-10.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">154 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvrP-4.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">155 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvrP-5.jpg'" loading="lazy" class="landscape-image">
+      </div>
+<div class="my-slides">
+         <div class="numbertext">156 / 156</div>
+         <img [defaultImage]="defaultImage2" [lazyLoad]="'../assets/img/vvrP-9.jpg'" loading="lazy" class="landscape-image">
+      </div>
+        
+        <!-- Next and Previous Buttons -->
+        <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlides(1)">&#10095;</a>
+    </div>
+ </div>
+<!-- Modal for Full Screen Image View Ends -->

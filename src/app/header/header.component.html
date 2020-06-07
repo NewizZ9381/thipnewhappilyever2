@@ -1,0 +1,81 @@
+<!-- Header for Navbar and Banner Text -->
+<header class="container-fluid bg-header" id="home">
+    <!-- For Adding Background Coloe -->
+    <div class="header-bg-gray">
+    
+        <!-- Navigation Bar Begins -->
+        <nav class="navbar navbar-light navbar-expand-md fixed-top" id="my-navbar" style="background-color: #FFF;">
+        
+            <!-- Navbar Brand Logo -->
+            <a href="#home" class="navbar-brand"><img src="../assets/img/bg/tnLogo4.png" style="height: 45px"></a>
+
+            <!-- Toggler button to replace the navbar when navbar is collapsed -->
+            <button class="navbar-toggler" type="button" (click)="toggleNavbar = !toggleNavbar" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbar-content" [ngbCollapse]="toggleNavbar">
+                <!-- "ml-auto" right aligns the links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" (click)="getActiveTab('home')" [class.active]="activetab === 'home'">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" (click)="getActiveTab('about')" [class.active]="activetab === 'about'">Co-Organizer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#photos" class="nav-link" (click)="getActiveTab('photos')" [class.active]="activetab === 'photos'">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#videos" class="nav-link" (click)="getActiveTab('videos')" [class.active]="activetab === 'videos'">Videos</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#ourStory" class="nav-link">Our Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#credits" class="nav-link">Credits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#guestbook" class="nav-link">Guestbook</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="#contactfooter" class="nav-link" (click)="getActiveTab('contact')" [class.active]="activetab === 'contact'">Contact</a>
+                    </li>
+                </ul>
+            
+            </div>
+            
+        </nav>
+        <!-- Navigation Bar Ends -->
+        
+        <!-- Container for Banner Text -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 wow bounceInUp" data-wow-delay="0.2s">
+                    <!-- Banner Text -->
+                    <div class="banner-text">
+<!--
+                        <h2>Welcome to<br><span class="decorate"> Thip-New the Wedding<br></span>
+                        Happily Ever After</h2>
+-->
+                        <h2><span class="decorate">Thank you Everyone</span><br>for making us the greatest day !</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 wow bounceInUp" data-wow-delay="0.2s">
+                    <!-- Scroll to About Button -->
+                    <div class="scroll-to-about text-center">
+                        <a href="#videoFade"><i class="fa fa-angle-down"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+    </div>
+
+</header>

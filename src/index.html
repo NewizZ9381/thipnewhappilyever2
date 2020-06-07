@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!--Page Title-->
+    <title>Thip-New | Happily Ever After</title>
+    <base href="/">
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <!--Favicon-->
+    <!-- <link rel="shortcut icon" href="../assets/images/favicon.ico" title="Favicon"/> -->
+    <link rel="icon" href="../assets/img/bg/tnLogo4.png" type="image/x-icon">	
+
+    <!-- Main CSS Files -->
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+
+    <!-- Namari Color CSS -->
+    <link rel="stylesheet" href="../assets/css/namari-color.css">
+
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+
+    <!-- Latest compiled and minified Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> 
+    
+
+    <!-- Animate CSS-->
+    <link href="../assets/css/animate.css" rel="stylesheet" type="text/css">
+
+    <!--Google Webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Google Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Satisfy|Questrial|Roboto" rel="stylesheet">
+
+</head>
+<body>
+
+<app-root>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+  </div>
+  <!--End of Preloader-->
+  </app-root>
+
+
+  
+<script type="text/javascript">
+  /* Progessive Bar */
+  // let progress = document.getElementById('progressbar');
+  // let totalHeight = document.body.scrollHeight - window.innebuyrHeight;
+  // window.onscroll = function(){
+  //     let progressHeight = (window.pageYOffset / totalHeight) * 100;
+  //     progress.style.height = progressHeight + "%";
+  // }
+  
+  /* Video Fade Effect */
+//   let video = document.querySelector('video');
+//   window.addEventListener('scroll', function(){
+//       let value = 2 + window.scrollY/ -600;
+//       video.style.opacity = value;
+//   })
+  
+//   function videoUrl(love){
+//       document.getElementById("slider").src = love;
+//   }
+  
+  
+  /* Smooth Scroll Effect */
+//   $('html, body').smoothScroll(500);
+
+  /* Button Selector Image */
+  filterSelection("all")
+  function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+  }
+
+  function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+  }
+
+  function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+  }
+  element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current button (highlight it)
+//   var btnContainer = document.getElementById("myBtnContainer");
+//   var btns = btnContainer.getElementsByClassName("btn");
+//   for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function(){
+//       var current = document.getElementsByClassName("active");
+//       current[0].className = current[0].className.replace(" active", "");
+//       this.className += " active";
+//   });
+//   }
+
+  /* Open Modal (Image Viewer or Slide Show) */
+  function openModal(){
+      /* Show Image Viewer or Modal when any image is clicked */
+      document.getElementById('my-modal').style.display="inline-flex"
+      
+      /* Hide body scrollbar when modal opens up */
+      document.body.style.overflow = "hidden";
+      
+      /* Hide Navbar in Modal view */
+      document.getElementById('my-navbar').style.display="none"
+  }
+
+  /* Closing Modal (Image Viewer) */
+  function closeModal(){
+      document.getElementById('my-modal').style.display="none"
+      
+      /* Show body scrollbar when modal opens up */
+      document.body.style.overflow = "auto";
+      
+      /* Show Navbar in Modal view */
+      document.getElementById('my-navbar').style.display="flex"
+  }
+  
+  /* Declare variable slideIndex and initialise to 1 */
+  var slideIndexJS = 1;
+  
+  /* Calling function showSlides() by passing variable slideIndexJS. This will hide all the slides initially */
+  showSlides(slideIndexJS);
+  
+  /* Funciton to execute Next and Previous Buttons operation */
+  function changeSlides(n){
+      showSlides(slideIndexJS += n); /* slideIndexJS = slideIndexJS + n;*/
+  }
+  
+  /* Display the image whose thumbnail is clicked */
+  function currentSlide(n){
+      showSlides(slideIndexJS = n);
+  }
+  
+  /* Main function to operate the slide show or modal or image viewer */
+  function showSlides(n){
+      var i;
+      
+      /* Get all elements with class "my-slides" */
+      var slideJS = document.getElementsByClassName("my-slides")
+      
+      /* If the slide index is greater than total no. of slides, then open slideIndexJS = 1 (begin with first slide after the last slide ends) */
+      if (n > slideJS.length) { slideIndexJS = 1};
+      
+      /* If the slide index is less than 1, then open slideIndexJS = last (if previous button is clicked on first slide then open last slide) */
+      if (n < 1) { slideIndexJS = slideJS.length};
+      
+      /* Hide all slide initially */
+      for (i = 0; i < slideJS.length; i++){
+          slideJS[i].style.display = "none";
+      }
+      
+      /* Show slide which is clicked */
+      slideJS[slideIndexJS - 1].style.display = "block";
+  }
+
+  // Get the modal
+  var modal = document.getElementById('my-modal');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+  }
+  
+  /* Video Player */
+//        var video_player = document.getElementById("video_player"),
+//        links = video_player.getElementsByTagName('a');
+//        for (var i=0; i<links.length; i++) {
+//            links[i].onclick = handler;
+//        function handler(e) {
+//            e.preventDefault();
+//            videotarget = this.getAttribute("href");
+//            filename = videotarget.substr(0, videotarget.lastIndexOf('.')) || videotarget;
+//            video = document.querySelector("#video_player video");
+//            video.removeAttribute("controls");
+//            video.removeAttribute("poster");
+//            source = document.querySelectorAll("#video_player video source");
+//            source[0].src = filename + ".mp4";
+//            source[1].src = filename + ".webm";
+//            video.load();
+//            video.play(); 
+//        }
+        
+</script>
+
+<!-- Include JavaScript resources -->
+<!-- <script src="../assets/js/jquery-3.5.1.min.js"></script> -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- <script src="../assets/js/jquery.1.8.3.min.js"></script> -->
+<script src="../assets/js/wow.min.js"></script>
+<script src="../assets/js/featherlight.min.js"></script>
+<script src="../assets/js/featherlight.gallery.min.js"></script>
+<script src="../assets/js/jquery.enllax.min.js"></script>
+<script src="../assets/js/jquery.scrollUp.min.js"></script>
+<script src="../assets/js/jquery.easing.min.js"></script>
+<script src="../assets/js/jquery.stickyNavbar.min.js"></script>
+<script src="../assets/js/jquery.waypoints.min.js"></script>
+<script src="../assets/js/images-loaded.min.js"></script>
+<script src="../assets/js/lightbox.min.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+<!-- JavaScript Plug-In for Smooth Scroll Effect -->
+<script src="../assets/js/jquery.smoothscroll.js"></script>
+<!-- <script>
+  if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll("img.lazyload");
+      images.forEach(img => {
+          img.src = img.dataset.src;
+      });
+  } else {
+      // Dynamically import the LazySizes library
+    let script = document.createElement("script");
+    script.async = true;
+    script.src =
+      "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js";
+    document.body.appendChild(script);
+  }
+</script> -->
+</body>
+</html>
